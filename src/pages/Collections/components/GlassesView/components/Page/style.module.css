@@ -1,0 +1,20 @@
+.glassesViewList {
+  display: grid;
+  grid-template-columns: repeat(3, calc(100% / 3));
+  margin-right: -1px;
+}
+
+.glassesViewList .glassesViewListItem {
+  border-right: 1px solid;
+}
+
+@media (max-width: 1318.9px) and (min-width: 700px) {
+  .glassesViewList {
+    grid-template-columns: 50% 50%;
+  }
+}
+@media (max-width: 719.9px) {
+  .glassesViewList {
+    grid-template-columns: 100%;
+  }
+}

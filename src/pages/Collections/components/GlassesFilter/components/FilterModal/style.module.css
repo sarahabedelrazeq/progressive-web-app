@@ -1,0 +1,165 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.glassesFilterModalContainer {
+  overflow: hidden;
+  -webkit-transition: max-height 1s ease;
+  -moz-transition: max-height 1s ease;
+  -ms-transition: max-height 1s ease;
+  -o-transition: max-height 1s ease;
+  transition: max-height 1s ease;
+}
+
+.glassesFilterModalContainer .glassesFilterContainerMain {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  border-top: 1px solid;
+}
+.glassesFilterModalContainer {
+  display: none;
+}
+
+.glassesFilterFooter {
+  padding: 18px 30px;
+  border-top: 1px solid;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.glassesFilterFooterStart {
+  width: calc(50% - 102px);
+}
+
+.glassesFilterFooterStart .glassesFilterFooterSelected {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.glassesFilterFooterStart .glassesFilterFooterSelected .glassesFilterButton {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 0;
+  background-color: transparent;
+  font-weight: 300;
+  font-size: 13px;
+  margin-top: 23px;
+  margin-right: 18px;
+  text-transform: uppercase;
+}
+
+.glassesFilterFooterEnd {
+  width: calc(50% - 102px);
+  text-align: end;
+}
+
+.glassesFilterFooter .glassesFilterFooterText {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 0;
+  background-color: transparent;
+}
+
+@media (max-width: 719.9px) {
+  .glassesFilterModalContainer {
+    display: block;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+    height: 100%;
+    overflow-y: auto;
+    border: 1px solid;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .glassesFilterModalContainer .glassesFilterContainerMain {
+    display: block;
+  }
+
+  .glassesFilterModalContainer .glassesFilterModalHeader {
+    height: 50px;
+    position: relative;
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .glassesFilterModalContainer .glassesFilterModalHeader button {
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    right: 22px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+  }
+
+  .glassesFilterModalContainer .glassesFilterModalBody {
+    height: calc(100vh - 100px);
+  }
+
+  .glassesFilterModalContainer .glassesFilterFooterStart {
+    width: 100%;
+  }
+
+  .glassesFilterModalContainer .glassesFilterFooterButtons {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .glassesFilterModalContainer
+    .glassesFilterFooterButtons
+    .glassesFilterFooterButton {
+    background-color: white;
+    display: block;
+    height: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    border: 0;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    line-height: 18px;
+  }
+  .glassesFilterModalContainer
+    .glassesFilterFooterButtons
+    .glassesFilterFooterButton:nth-child(odd) {
+    border-left: 0;
+  }
+}

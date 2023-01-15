@@ -1,0 +1,278 @@
+.glassesFilter {
+  border-bottom: 1px solid;
+}
+.glassesFilterHeader {
+  padding: 15px 30px;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  align-items: center;
+}
+
+.glassesFilterHeader .glassesFilterTitle {
+  left: 12px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.glassesFilterHeader .glassesFilterHeaderEnd {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.glassesFilterHeader .glassesFilterHeaderSwitcherLabel {
+  font-weight: 700;
+  font-size: 15px;
+}
+.glassesFilterHeader .glassesFilterHeaderSwitcher {
+  border: 1px solid;
+  width: 38px;
+  padding: 2px;
+  display: block;
+  background: transparent;
+}
+.glassesFilterHeader .glassesFilterHeaderSwitcherToggle {
+  width: 14px;
+  height: 8px;
+  border: 1px solid;
+  display: block;
+}
+.glassesFilterHeader .glassesFilterHeaderSwitcherToggleChecked {
+  width: 14px;
+  height: 8px;
+  background-color: black;
+  border: 1px solid;
+  margin-left: 16px;
+  display: block;
+}
+.glassesFilterHeader .glassesFilterHeaderStart {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.glassesFilterHeader .glassesFilterHeaderToggle {
+  position: relative;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  font-size: 15px;
+}
+.glassesFilterHeader
+  .glassesFilterHeaderToggle
+  .glassesFilterHeaderToggleCount {
+  position: absolute;
+  top: -6px;
+  right: -5px;
+  border-radius: 50%;
+  padding-inline: 4px;
+  background-color: white;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 70%);
+}
+
+.glassesFilterHeader .glassesFilterHeaderSearch {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.glassesFilterContainer {
+  overflow: hidden;
+  -webkit-transition: max-height 1s ease;
+  -moz-transition: max-height 1s ease;
+  -ms-transition: max-height 1s ease;
+  -o-transition: max-height 1s ease;
+  transition: max-height 1s ease;
+}
+
+.glassesFilterContainer .glassesFilterContainerMain {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  border-top: 1px solid;
+}
+
+.glassesFilterFooter {
+  padding: 0 30px;
+  min-height: 60px;
+  border-top: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.glassesFilterFooterStart {
+  width: calc(50% - 102px);
+  margin-bottom: 23px;
+}
+
+.glassesFilterFooterStart .glassesFilterFooterSelected {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.glassesFilterFooterStart .glassesFilterFooterSelected .glassesFilterButton {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 0;
+  background-color: transparent;
+  font-weight: 300;
+  font-size: 13px;
+  margin-top: 23px;
+  margin-right: 18px;
+  text-transform: uppercase;
+}
+
+.glassesFilterFooterEnd {
+  width: calc(50% - 102px);
+  text-align: end;
+}
+
+.glassesFilterFooter .glassesFilterFooterText {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 0;
+  background-color: transparent;
+}
+
+@media (max-width: 1290px) {
+  .glassesFilterContainer .glassesFilterContainerMain {
+    display: block;
+  }
+}
+@media (max-width: 1318.9px) and (min-width: 891px) {
+  .glassesFilterHeader .glassesFilterHeaderSwitcherLabel {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .glassesFilterHeader .glassesFilterHeaderToggle {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .glassesFilterHeader .glassesFilterHeaderSearch {
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .glassesFilterHeader .glassesFilterTitle {
+    font-size: 20px;
+  }
+}
+@media (max-width: 890.9px) and (min-width: 720px) {
+  .glassesFilterHeader {
+    padding: 0;
+    grid-template-columns: none;
+    grid-template-areas:
+      "center center center center"
+      "start end end end";
+  }
+  .glassesFilterHeader .glassesFilterHeaderStart {
+    grid-area: start;
+    padding: 10px 0;
+    justify-content: center;
+    border-right: 1px solid;
+  }
+  .glassesFilterHeader .glassesFilterHeaderCenter {
+    grid-area: center;
+    padding: 10px 0;
+    border-bottom: 1px solid;
+  }
+  .glassesFilterHeader .glassesFilterHeaderEnd {
+    grid-area: end;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: flex-start;
+    gap: 0;
+  }
+  .glassesFilterHeader .glassesFilterHeaderEnd > div {
+    display: flex;
+    padding-block: 10px;
+    justify-content: center;
+  }
+  .glassesFilterHeader .glassesFilterHeaderEnd .glassesFilterHeaderFilter {
+    border-right: 1px solid;
+  }
+
+  .glassesFilterHeader .glassesFilterTitle {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .glassesFilterHeader .glassesFilterHeaderSwitcherLabel {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .glassesFilterHeader .glassesFilterHeaderToggle {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .glassesFilterHeader .glassesFilterHeaderSearch {
+    font-weight: 700;
+    font-size: 14px;
+  }
+}
+@media (max-width: 719.9px) {
+  .glassesFilterContainer {
+    display: none;
+  }
+  .glassesFilterHeader {
+    padding: 0;
+    grid-template-columns: none;
+    grid-template-areas:
+      "center"
+      "end"
+      "start";
+  }
+  .glassesFilterHeader .glassesFilterHeaderStart {
+    grid-area: start;
+    padding: 15px 0;
+    justify-content: center;
+  }
+  .glassesFilterHeader .glassesFilterHeaderCenter {
+    grid-area: center;
+    padding: 15px 0;
+    border-bottom: 1px solid;
+  }
+  .glassesFilterHeader .glassesFilterHeaderEnd {
+    grid-area: end;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 0;
+    justify-content: flex-start;
+    border-bottom: 1px solid;
+  }
+  .glassesFilterHeader .glassesFilterHeaderEnd > div {
+    display: flex;
+    padding-block: 15px;
+    justify-content: center;
+  }
+  .glassesFilterHeader .glassesFilterHeaderEnd .glassesFilterHeaderFilter {
+    border-right: 1px solid;
+  }
+  .glassesFilterHeader .glassesFilterTitle {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .glassesFilterHeader .glassesFilterHeaderToggle {
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .glassesFilterHeader .glassesFilterHeaderSearch {
+    font-weight: 600;
+    font-size: 13px;
+  }
+}

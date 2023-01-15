@@ -1,0 +1,10 @@
+.pageContainer {
+  padding-top: 50px;
+  border: 1px solid;
+  overflow-y: hidden;
+}
+@media (max-width: 1366px) {
+  .pageContainer {
+    padding-top: 40px;
+  }
+}

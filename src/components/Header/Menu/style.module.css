@@ -1,0 +1,121 @@
+.navbarItemMenu {
+  position: fixed;
+  top: 49px;
+  width: 480px;
+  max-width: 100%;
+  background-color: white !important;
+  border: 1px solid;
+  left: -500px;
+  transition: left 0.5s ease;
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column !important;
+}
+
+.navbarItemMenuOpen {
+  left: 0;
+}
+
+
+.sideMenuHeader .sideMenuHeaderTap {
+  padding-inline: 18px;
+  border-bottom: 1px solid;
+}
+.sideMenuHeader .sideMenuHeaderTap:hover {
+  background-color: black;
+}
+
+.sideMenuHeader .sideMenuHeaderTap .sideMenuHeaderTapButton {
+  color: black !important;
+  background-color: transparent !important;
+  border: none !important;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  cursor: pointer !important;
+}
+
+.sideMenuHeader .sideMenuHeaderTap:hover .sideMenuHeaderTapButton {
+  color: white !important;
+}
+
+.sideMenuHeader .sideMenuHeaderTapBack {
+  padding-inline: 18px;
+  border-bottom: 1px solid;
+}
+
+.sideMenuHeader .sideMenuHeaderTapBack .sideMenuHeaderTapButton {
+  color: black !important;
+  background-color: transparent !important;
+  border: none !important;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  cursor: pointer !important;
+}
+
+
+.sideMenuBody {
+  height: 100%;
+}
+
+.sideMenuBody .sideMenuBodyLink {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-inline: 18px;
+}
+
+.sideMenuBody .sideMenuBodyLink .sideMenuBodyLinkButton {
+  color: black !important;
+  background-color: transparent !important;
+  border: none !important;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 1px;
+}
+
+.sideMenuBody .sideMenuBodyLink .sideMenuBodyLinkButton:hover {
+  text-decoration: underline !important;
+}
+
+.sideMenuFooter {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.sideMenuFooter .sideMenuFooterButton {
+  height: 60px;
+
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sideMenuFooter .sideMenuFooterButton span {
+  color: black !important;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+@media (max-width: 1366px) {
+  .navbarItemMenu{
+    top: 39px;
+    height: calc(100vh - 40px);
+
+  }
+}

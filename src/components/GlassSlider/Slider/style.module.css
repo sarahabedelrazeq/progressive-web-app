@@ -1,0 +1,108 @@
+.sliderMain {
+  position: relative;
+}
+.slider .pagination {
+  display: grid;
+  grid-template-columns: 146px calc(100% - 146px);
+  margin-top: -5px;
+  position: relative;
+  z-index: 6;
+  border-bottom: 1px solid;
+}
+.slider .pagination .paginationBtn .paginationBtn {
+  font-weight: 500;
+  font-size: 15px;
+  background-color: white;
+  border: 0;
+  border-top: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid;
+}
+.slider .pagination .paginationSlider .paginationSwatcher {
+  background-color: black !important;
+  height: 1px;
+  transition: all 0.5s ease;
+  margin-top: -5px;
+  margin-bottom: 4px;
+  right: 0;
+}
+.slider .pagination .paginationSlider .paginationSliderContainer .swiperSlide {
+  width: 100%;
+  cursor: pointer !important;
+  height: 50px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+.slider
+  .pagination
+  .paginationSlider
+  .paginationSliderContainer
+  .swiperSlide:last-child {
+  border-right: 0;
+}
+.slider
+  .pagination
+  .paginationSlider
+  .paginationSliderContainer
+  .swiperSlide
+  .swiperPaginationImage {
+  background-color: black;
+  background-size: 100% 100%;
+  height: 100%;
+}
+.slider .sliderOverlay {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.slider .sliderOverlay .sliderOverlayPrev .overlayBtn {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMyAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuNDcwNTkgMUwxIDkuMjQyNDJNMSA5LjI0MjQyTDcuNDcwNTkgMTdNMSA5LjI0MjQySDIzIiBzdHJva2U9IiMwMjAzMDQiLz4KPC9zdmc+Cg==)
+      15 15,
+    auto;
+}
+.slider .sliderOverlay .sliderOverlayNext .overlayBtn {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMyAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1LjUyOTQgMTdMMjIgOC43NTc1OE0yMiA4Ljc1NzU4TDE1LjUyOTQgMU0yMiA4Ljc1NzU4TC05LjI5MTkyZS0wNyA4Ljc1NzU4IiBzdHJva2U9IiMwMjAzMDQiLz4KPC9zdmc+Cg==)
+      15 15,
+    auto;
+}
+.slider .sliderOverlay .sliderOverlayLink .overlayLink {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: block;
+}
+@media (max-width: 719.9px) {
+  .slider .sliderOverlay .sliderOverlayPrev,
+  .slider .sliderOverlay .sliderOverlayNext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider .sliderOverlay .sliderOverlayPrev .overlayBtn,
+  .slider .sliderOverlay .sliderOverlayNext .overlayBtn {
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    cursor: pointer;
+    border: none;
+    display: block;
+  }
+}

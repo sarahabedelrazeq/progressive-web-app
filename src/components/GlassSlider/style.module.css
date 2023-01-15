@@ -1,0 +1,39 @@
+.glassSlider {
+  position: relative;
+}
+
+.glassSlider .glassSliderHeader {
+  display: flex;
+  width: 100%;
+  top: 20px;
+  position: absolute;
+  height: 40px;
+  z-index: 5;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  gap: 5px;
+}
+
+.glassSlider .glassSliderHeader .subName {
+  font-weight: 300;
+}
+
+.glassSlider .glassSliderHeader .mainName {
+  font-weight: 500;
+}
+
+@media (max-width: 1318.9px){
+  .glassSlider .glassSliderHeader {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 890.9px) {
+  .glassSlider .glassSliderHeader {
+    font-size: 15px;
+  }
+}

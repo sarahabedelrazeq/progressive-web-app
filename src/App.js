@@ -1,25 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ErrorBoundary, Fallback } from "components";
+import React from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import routes from "routes";
+import "./sass/index.scss";
 
 function App() {
+  const { pathname } = useLocation();
+
+  React.useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ErrorBoundary>
+      <div>
+        <React.Suspense
+          fallback={
+            <div style={{ height: "100vh" }}>
+              <Fallback />
+            </div>
+          }
         >
-          Learn React with sarah
-        </a>
-      </header>
-    </div>
+          <Routes basename="/">
+            {routes.map((route, idx) => {
+              return (
+                route.component && (
+                  <Route
+                    key={idx}
+                    path={route.path}
+                    exact={route.exact}
+                    name={route.name}
+                    element={<route.component />}
+                  />
+                )
+              );
+            })}
+          </Routes>
+        </React.Suspense>
+      </div>
+    </ErrorBoundary>
   );
 }
 

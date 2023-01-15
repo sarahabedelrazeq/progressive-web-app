@@ -1,0 +1,113 @@
+.glassesFilter {
+  border-right: 1px solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.glassesFilter:last-child {
+  border-right: 0;
+}
+
+.glassesFilter .glassesFilterTitleContainer {
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  width: 100%;
+}
+.glassesFilter .glassesFilterTitleContainerButton {
+  display: none;
+}
+
+.glassesFilter .glassesFilterTitle {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.glassesFilter .glassesFilterListContainer {
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: max-height 1s ease;
+  -moz-transition: max-height 1s ease;
+  -ms-transition: max-height 1s ease;
+  -o-transition: max-height 1s ease;
+  transition: max-height 1s ease;
+}
+
+.glassesFilter .glassesFilterListContainer .glassesFilterList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  column-gap: 50px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.glassesFilter .glassesFilterList .glassesFilterButton {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: capitalize;
+  border: 0;
+  background-color: transparent;
+}
+
+@media (max-width: 1290px) {
+  .glassesFilter {
+    border-right: 0;
+  }
+
+  .glassesFilter .glassesFilterTitleContainer {
+    display: none;
+  }
+
+  .glassesFilter .glassesFilterTitleContainerButton {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    border: 0;
+    background-color: transparent;
+    width: 100%;
+    padding-inline: 30px;
+  }
+  .glassesFilter .glassesFilterListContainer {
+    border-bottom: 1px solid;
+    max-height: 400px;
+  }
+  .glassesFilter .glassesFilterListContainerClose {
+    max-height: 0;
+  }
+  .glassesFilter:last-child .glassesFilterListContainer {
+    border-bottom: 0;
+  }
+  .glassesFilter .glassesFilterListContainer .glassesFilterList {
+    justify-content: flex-start;
+    padding: 0;
+    padding-inline: 30px;
+    padding-bottom: 30px;
+
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 719.9px) {
+  .glassesFilter .glassesFilterTitleContainerButton {
+    padding-inline: 22px;
+  }
+  .glassesFilter .glassesFilterListContainer .glassesFilterList {
+    padding-inline: 22px;
+    padding-bottom: 22px;
+  }
+  .glassesFilter .glassesFilterTitle {
+    font-weight: 600;
+    font-size: 13px;
+  }
+}

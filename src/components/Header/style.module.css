@@ -1,0 +1,99 @@
+.mainHeader {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
+  height: 50px;
+}
+.mainHeader * {
+  max-height: 100%;
+}
+
+.mainNavbar {
+  display: grid;
+  grid-template-columns: 160px 160px 160px 1fr 160px 160px 160px;
+  align-items: center;
+  border: 1px solid;
+  height: 48px;
+}
+
+.mainNavbar .navbarItem,
+.mainNavbar .navbarLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer !important;
+}
+
+.mainNavbar .navbarItem:last-child {
+  border-right: 0px solid black;
+}
+
+.mainNavbar .navbarItem .navbarItemButton {
+  color: black !important;
+  font-size: 12px !important;
+  letter-spacing: 2px !important;
+  background-color: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.mainNavbar .navbarItem:hover .navbarItemButton {
+  text-decoration: underline !important;
+}
+.navbarItemCloseButton {
+  display: none;
+}
+
+@media (max-width: 1366px) {
+  .mainHeader {
+    height: 40px;
+  }
+  .mainNavbar {
+    height: 38px;
+    grid-template-columns: 160px 1fr 160px;
+  }
+  .mainNavbar .navbarItemShowInXXl {
+    display: none;
+  }
+  .mainNavbar .navbarLogo svg {
+    width: 107.56px;
+    height: 16.68px;
+  }
+}
+
+@media (max-width: 499.9px) and (min-width: 375px) {
+  .mainNavbar {
+    height: 38px;
+    grid-template-columns: 90px 1fr 90px;
+  }
+  .mainNavbar .navbarItem .navbarItemButton {
+    font-weight: 400;
+    font-size: 10px !important;
+    line-height: 12px;
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 574.9px) {
+  .mainNavbar {
+    height: 38px;
+    grid-template-columns: 90px 1fr 90px;
+  }
+  
+  .mainNavbar .navbarItem .navbarItemButton {
+    font-weight: 400;
+    font-size: 10px !important;
+    line-height: 12px;
+    letter-spacing: 2px;
+  }
+
+  .navbarItemOpenButton {
+    display: none;
+  }
+  .navbarItemCloseButton {
+    display: flex;
+  }
+}

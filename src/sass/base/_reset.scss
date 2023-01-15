@@ -1,0 +1,35 @@
+html {
+  position: relative;
+  min-width: 320px;
+  overflow-x: hidden;
+  &[dir="rtl"] {
+    direction: rtl;
+  }
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  line-height: unset !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a,
+button,
+textarea,
+input,
+select {
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    outline: 0 !important;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+    -webkit-box-shadow: none !important;
+  }
+}
